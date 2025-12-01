@@ -1,0 +1,15 @@
+import qrcode
+
+img = qrcode.make("https://www.linkedin.com/in/ankit-rawat-40b675234/")
+img.save("qrcode.png")
+
+
+#with the help of input function
+
+URL=input("Enter URL:").strip()
+file_path="C:\\Users\\LENOVO\\OneDrive\\Desktop\\project"
+
+qr=qrcode.QRCode()
+qr.add_data(URL)
+img=qr.make_image()
+img.save("qrcode.png")
